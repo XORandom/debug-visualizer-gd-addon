@@ -12,7 +12,14 @@ var vector_visualizes_array: Array[VectorVisualizer] = []
 ## Массив существующих визуализаций для текстовых панелей
 var text_visualizes_array: Array[TextVisualizer] = []
 
+## узнаём размер она
+var windows_sise: Vector2i
+#TODO насколько ресурсоёмка эта процедура,
+#стоит ли вызывать в каждом физическом кадре для игры с разным размером окна TODO
+
 func  _ready() -> void:
+	windows_sise = get_window().size
+	print(windows_sise)
 	vector_visualizes_array.resize(10)
 	vector_visualizes_array.fill(null)
 	text_visualizes_array.resize(10)
@@ -51,6 +58,18 @@ func show_debug_info(
 	title_data:Array=[" "],
 	pnl_position: Vector2=Vector2.ZERO
 	) -> void:
+
+	if (pnl_position.x > windows_sise.x
+	or pnl_position.y > windows_sise.y
+	or pnl_position.x < 0
+	or pnl_position.y > 0):
+		push_warning("Панель {0} находится за границей экрана.
+		Положение панели: {1}
+		Размер окна: {2}
+		".format([pnl_id, pnl_position, windows_sise]))
+		## Поставив Vector2.ZERO, будет использоваться маркер для координат
+		pnl_position = Vector2.ZERO
+
 	if text_visualizes_array[pnl_id] == null:
 		_spawn_text_visualizer(pnl_id, pnl_position)
 	text_visualizes_array[pnl_id].show_text(_array_to_string(title_data), _array_to_string(new_data))
@@ -80,6 +99,19 @@ func visualize_vector(
 	divider:float =.1,
 	pnl_position: Vector2=Vector2.ZERO
 	) -> void:
+
+	if (pnl_position.x > windows_sise.x
+	or pnl_position.y > windows_sise.y
+	or pnl_position.x < 0
+	or pnl_position.y > 0):
+		push_warning("Панель {0} находится за границей экрана.
+		Положение панели: {1}
+		Размер окна: {2}
+		Вместо указанных координат будут использоваться координаты Marker2D
+		".format([pnl_id, pnl_position, windows_sise]))
+		## Поставив Vector2.ZERO, будет использоваться маркер для координат
+		pnl_position = Vector2.ZERO
+
 	if vector_visualizes_array[pnl_id] == null:
 		_spawn_vector_visualizer(pnl_id, pnl_position)
 	vector_visualizes_array[pnl_id].show_vector(vec_id, vector, log_form, divider)
