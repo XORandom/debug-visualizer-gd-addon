@@ -10,12 +10,12 @@ func _toggled(toggled_on: bool) -> void:
 		print(hideable_parent)
 
 	if toggled_on:
-		for child in hideable_parent.get_children():
-			if child is CanvasItem:
-				if child.has_meta("debug_visualizer_always_visible") and child.get_meta("debug_visualizer_always_visible") == true:
-					child.self_modulate.a = 0.5
-				else:
-					child.self_modulate.a = 0
+
+		for child in hideable_parent.find_children("*", "CanvasItem", true, false):
+			if child.has_meta("debug_visualizer_always_visible") and child.get_meta("debug_visualizer_always_visible") == true:
+				child.self_modulate.a = 0.5
+			else:
+				child.self_modulate.a = 0
 
 		if hideable_parent is CanvasItem:
 			hideable_parent.self_modulate.a = 0
@@ -23,9 +23,8 @@ func _toggled(toggled_on: bool) -> void:
 			push_warning("родительский элемент {0} не является дочерним к CanvasItem".format([hideable_parent]))
 
 	else:
-		for child in hideable_parent.get_children():
-			if child is CanvasItem:
-				child.self_modulate.a = 1
+		for child in hideable_parent.find_children("*", "CanvasItem", true, false):
+			child.self_modulate.a = 1
 		if hideable_parent is CanvasItem:
 			hideable_parent.self_modulate.a = 1
 		else:

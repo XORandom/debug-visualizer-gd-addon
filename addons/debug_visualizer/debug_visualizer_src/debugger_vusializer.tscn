@@ -17,6 +17,16 @@ grow_vertical = 2
 mouse_filter = 2
 theme = ExtResource("2_degxc")
 metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
+
+[node name="VisualizerHideButton" parent="Control" unique_id=641075653 node_paths=PackedStringArray("hideable_parent") instance=ExtResource("3_sy3ue")]
+modulate = Color(0.97, 0.9481751, 0.9409, 1)
+layout_mode = 1
+offset_left = 9.0
+offset_top = -54.0
+offset_right = 95.0
+offset_bottom = 32.0
+hideable_parent = NodePath("../Panel")
 
 [node name="Panel" type="Panel" parent="Control" unique_id=2072525841]
 layout_mode = 1
@@ -27,6 +37,7 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 theme = ExtResource("2_degxc")
+metadata/_edit_lock_ = true
 
 [node name="Marker2D" type="Marker2D" parent="Control/Panel" unique_id=1877844598]
 position = Vector2(1018, 87)
@@ -51,18 +62,3 @@ position = Vector2(778, 504)
 
 [node name="Marker2D8" type="Marker2D" parent="Control/Panel" unique_id=1307133229]
 position = Vector2(247, 80)
-
-[node name="VisualizerHideButton" parent="Control" unique_id=641075653 node_paths=PackedStringArray("hideable_parent") instance=ExtResource("3_sy3ue")]
-layout_mode = 1
-anchors_preset = 1
-anchor_left = 1.0
-anchor_top = 0.0
-anchor_right = 1.0
-anchor_bottom = 0.0
-offset_left = -45.0
-offset_top = -1.0
-offset_right = 41.0
-offset_bottom = 85.0
-grow_horizontal = 0
-grow_vertical = 1
-hideable_parent = NodePath("../Panel")
