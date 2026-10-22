@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://67uec4i18tvc"]
+
+[ext_resource type="Script" uid="uid://s5n3kkkotjsi" path="res://examples/debug_visualizer_examples/debug_visualizer_example.gd" id="1_yk5nw"]
+
+[node name="DebugVisualizerExample" type="Node2D" unique_id=2134228621]
+script = ExtResource("1_yk5nw")

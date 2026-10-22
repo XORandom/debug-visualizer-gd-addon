@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://bky42siellcoe"]
+
+[ext_resource type="Theme" uid="uid://cm4ipfqd4vnqv" path="res://addons/debug_visualizer/debug_visualizer_assets/debug_visualizer_theme.tres" id="1_aw1gb"]
+[ext_resource type="PackedScene" uid="uid://baa65lfm838qo" path="res://addons/debug_visualizer/debug_visualizer_src/visualizer_hide_button.tscn" id="1_oraqp"]
+[ext_resource type="Script" uid="uid://caamtc38ghbnb" path="res://addons/debug_visualizer/debug_visualizer_src/text_visualizer.gd" id="1_ssywx"]
+[ext_resource type="PackedScene" uid="uid://b1bl85c27q8xm" path="res://addons/debug_visualizer/debug_visualizer_src/visualizer_move_button.tscn" id="2_ssywx"]
+
+[node name="TextVisualizer" type="Panel" unique_id=864187809]
+offset_right = 283.0
+offset_bottom = 78.0
+mouse_filter = 1
+theme = ExtResource("1_aw1gb")
+script = ExtResource("1_ssywx")
+
+[node name="TextVisualizerTitle" type="RichTextLabel" parent="." unique_id=421387952]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 21.0
+grow_horizontal = 2
+mouse_filter = 1
+theme_override_font_sizes/normal_font_size = 12
+theme_override_font_sizes/mono_font_size = 12
+text = "Заголовок"
+
+[node name="TextVisualizerText" type="RichTextLabel" parent="." unique_id=836183096]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 23.0
+offset_bottom = 57.0
+grow_horizontal = 2
+mouse_filter = 1
+theme_override_font_sizes/normal_font_size = 12
+text = "ТЕКСТТЕКСТТЕКСТТЕКСТТЕКСТТЕКСТТЕКСТТЕКСТТЕКСТТЕКСТТЕКСТТЕКСТТЕКСТТЕКСТТЕКСТТЕКСТТЕКСТТЕКСТТЕКСТТЕКСТТЕКСТ"
+fit_content = true
+
+[node name="VisualizerHideButton" parent="." unique_id=641075653 instance=ExtResource("1_oraqp")]
+layout_mode = 1
+
+[node name="VisualizerMoveButton" parent="." unique_id=1384106484 instance=ExtResource("2_ssywx")]
+layout_mode = 1
+offset_left = 22.0
+offset_top = -17.0
+offset_right = 134.0
+offset_bottom = 47.0

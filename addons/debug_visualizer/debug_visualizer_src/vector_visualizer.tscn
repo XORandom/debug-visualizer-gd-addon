@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://btwcn5l1jih2m"]
+
+[ext_resource type="Texture2D" uid="uid://b20jth528cofw" path="res://addons/debug_visualizer/debug_visualizer_assets/Vector_coords.png" id="1_4wckf"]
+[ext_resource type="Script" uid="uid://ded7mvk437qkb" path="res://addons/debug_visualizer/debug_visualizer_src/vector_visualizer.gd" id="1_8jrj8"]
+[ext_resource type="PackedScene" uid="uid://baa65lfm838qo" path="res://addons/debug_visualizer/debug_visualizer_src/visualizer_hide_button.tscn" id="3_m8rns"]
+[ext_resource type="PackedScene" uid="uid://b1bl85c27q8xm" path="res://addons/debug_visualizer/debug_visualizer_src/visualizer_move_button.tscn" id="4_pt402"]
+
+[node name="VectorVisualizer" type="Sprite2D" unique_id=1805671880]
+z_index = 4096
+texture_filter = 1
+texture = ExtResource("1_4wckf")
+script = ExtResource("1_8jrj8")
+vector_limit = 19
+
+[node name="VisualizerHideButton" parent="." unique_id=641075653 instance=ExtResource("3_m8rns")]
+offset_left = -149.0
+offset_top = -149.0
+offset_right = -63.0
+offset_bottom = -63.0
+
+[node name="VisualizerMoveButton" parent="." unique_id=1384106484 instance=ExtResource("4_pt402")]
+offset_left = -105.0
+offset_top = -143.0
+offset_right = 363.0
+offset_bottom = -79.0

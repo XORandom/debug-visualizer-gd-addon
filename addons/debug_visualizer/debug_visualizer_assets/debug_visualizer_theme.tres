@@ -1,0 +1,37 @@
+[gd_resource type="Theme" format=3 uid="uid://cm4ipfqd4vnqv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ouhij"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qrlbt"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7g7ph"]
+bg_color = Color(0.27, 0.17208003, 0.0864, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_degxc"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uh73v"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_32qvk"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aaqqr"]
+bg_color = Color(0.14117648, 0.08627451, 0.039215688, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_r4un3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_aaqqr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_q71mx"]
+
+[resource]
+FoldableContainer/styles/focus = SubResource("StyleBoxEmpty_ouhij")
+FoldableContainer/styles/panel = SubResource("StyleBoxEmpty_qrlbt")
+FoldableContainer/styles/title_panel = SubResource("StyleBoxFlat_7g7ph")
+Panel/styles/panel = SubResource("StyleBoxEmpty_degxc")
+RichTextLabel/styles/background = SubResource("StyleBoxFlat_uh73v")
+RichTextLabel/styles/fill = SubResource("StyleBoxFlat_32qvk")
+RichTextLabel/styles/normal = SubResource("StyleBoxFlat_aaqqr")
+ScrollContainer/styles/focus = SubResource("StyleBoxEmpty_r4un3")
+ScrollContainer/styles/panel = SubResource("StyleBoxEmpty_aaqqr")
+TabContainer/styles/panel = SubResource("StyleBoxEmpty_q71mx")

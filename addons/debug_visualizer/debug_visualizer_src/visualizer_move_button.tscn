@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://b1bl85c27q8xm"]
+
+[ext_resource type="Texture2D" uid="uid://dfgfukwkowrdd" path="res://addons/debug_visualizer/debug_visualizer_assets/debug_visualizer_move_icon.png" id="1_mas5b"]
+[ext_resource type="Texture2D" uid="uid://cpdhxmdywg0ha" path="res://addons/debug_visualizer/debug_visualizer_assets/debug_visualizer_moving_icon.png" id="2_7dc1j"]
+[ext_resource type="Script" uid="uid://d3padns2kya2j" path="res://addons/debug_visualizer/debug_visualizer_src/visualizer_move_button.gd" id="3_7dc1j"]
+
+[node name="VisualizerMoveButton" type="TextureButton" unique_id=1384106484]
+self_modulate = Color(0, 1, 0.16666651, 1)
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = -16.0
+offset_right = 132.0
+offset_bottom = 48.0
+grow_vertical = 0
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("1_mas5b")
+texture_pressed = ExtResource("2_7dc1j")
+script = ExtResource("3_7dc1j")
+metadata/debug_visualizer_always_visible = true
+
+[connection signal="button_down" from="." to="." method="_on_visualizer_move_button_button_down"]
+[connection signal="button_up" from="." to="." method="_on_visualizer_move_button_button_up"]

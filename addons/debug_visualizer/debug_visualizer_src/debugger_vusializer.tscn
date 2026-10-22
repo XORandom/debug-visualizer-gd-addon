@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://uh5w4bh2vjlx"]
+
+[ext_resource type="Script" uid="uid://begx0u1seq4gy" path="res://addons/debug_visualizer/debug_visualizer_src/debugger_vusializer.gd" id="1_02amb"]
+[ext_resource type="Theme" uid="uid://cm4ipfqd4vnqv" path="res://addons/debug_visualizer/debug_visualizer_assets/debug_visualizer_theme.tres" id="2_degxc"]
+[ext_resource type="PackedScene" uid="uid://baa65lfm838qo" path="res://addons/debug_visualizer/debug_visualizer_src/visualizer_hide_button.tscn" id="3_sy3ue"]
+
+[node name="DebuggerVusializer" type="CanvasLayer" unique_id=991815280]
+script = ExtResource("1_02amb")
+
+[node name="Control" type="Control" parent="." unique_id=471946592]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = ExtResource("2_degxc")
+metadata/_edit_use_anchors_ = true
+
+[node name="Panel" type="Panel" parent="Control" unique_id=2072525841]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = ExtResource("2_degxc")
+
+[node name="Marker2D" type="Marker2D" parent="Control/Panel" unique_id=1877844598]
+position = Vector2(1018, 87)
+
+[node name="Marker2D2" type="Marker2D" parent="Control/Panel" unique_id=1095987816]
+position = Vector2(1018, 307)
+
+[node name="Marker2D3" type="Marker2D" parent="Control/Panel" unique_id=1077930905]
+position = Vector2(1018, 498)
+
+[node name="Marker2D4" type="Marker2D" parent="Control/Panel" unique_id=270508034]
+position = Vector2(542, 80)
+
+[node name="Marker2D5" type="Marker2D" parent="Control/Panel" unique_id=445541668]
+position = Vector2(778, 83)
+
+[node name="Marker2D6" type="Marker2D" parent="Control/Panel" unique_id=996582936]
+position = Vector2(778, 308)
+
+[node name="Marker2D7" type="Marker2D" parent="Control/Panel" unique_id=891170401]
+position = Vector2(778, 504)
+
+[node name="Marker2D8" type="Marker2D" parent="Control/Panel" unique_id=1307133229]
+position = Vector2(247, 80)
+
+[node name="VisualizerHideButton" parent="Control" unique_id=641075653 node_paths=PackedStringArray("hideable_parent") instance=ExtResource("3_sy3ue")]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 0.0
+offset_left = -45.0
+offset_top = -1.0
+offset_right = 41.0
+offset_bottom = 85.0
+grow_horizontal = 0
+grow_vertical = 1
+hideable_parent = NodePath("../Panel")
