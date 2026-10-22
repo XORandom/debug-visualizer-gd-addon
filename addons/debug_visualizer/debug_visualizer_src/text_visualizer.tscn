@@ -8,7 +8,7 @@
 [node name="TextVisualizer" type="Panel" unique_id=864187809]
 offset_right = 283.0
 offset_bottom = 78.0
-mouse_filter = 1
+mouse_filter = 2
 theme = ExtResource("1_aw1gb")
 script = ExtResource("1_ssywx")
 
@@ -18,7 +18,7 @@ anchors_preset = 10
 anchor_right = 1.0
 offset_bottom = 21.0
 grow_horizontal = 2
-mouse_filter = 1
+mouse_filter = 2
 theme_override_font_sizes/normal_font_size = 12
 theme_override_font_sizes/mono_font_size = 12
 text = "Заголовок"
@@ -30,7 +30,7 @@ anchor_right = 1.0
 offset_top = 23.0
 offset_bottom = 57.0
 grow_horizontal = 2
-mouse_filter = 1
+mouse_filter = 2
 theme_override_font_sizes/normal_font_size = 12
 text = "ТЕКСТТЕКСТТЕКСТТЕКСТТЕКСТТЕКСТТЕКСТТЕКСТТЕКСТТЕКСТТЕКСТТЕКСТТЕКСТТЕКСТТЕКСТТЕКСТТЕКСТТЕКСТТЕКСТТЕКСТТЕКСТ"
 fit_content = true

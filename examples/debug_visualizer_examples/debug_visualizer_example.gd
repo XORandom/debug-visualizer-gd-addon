@@ -36,7 +36,7 @@ func _ready() -> void:
 
 
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	var time: Dictionary = Time.get_time_dict_from_system()
 	project_current_hour = time["hour"]
 	project_current_minute = time["minute"]
