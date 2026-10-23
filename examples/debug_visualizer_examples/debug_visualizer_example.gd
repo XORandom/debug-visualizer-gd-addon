@@ -16,23 +16,23 @@ var project_current_minute: float = 0.0
 var project_current_hour: float = 0.0
 
 func _ready() -> void:
-	DebuggerVusializer.visualize_vector(0, 0, Vector2.LEFT.rotated(0), false, 0.100, Vector2(200, 500))
-	DebuggerVusializer.visualize_vector(0, 1, Vector2.LEFT.rotated(PI/6), false, 0.01, Vector2(200, 500))
-	DebuggerVusializer.visualize_vector(0, 2, Vector2.LEFT.rotated(PI/4), false, 0.01, Vector2(200, 500))
-	DebuggerVusializer.visualize_vector(0, 3, Vector2.LEFT.rotated(PI/3), false, 0.01, Vector2(200, 500))
-	DebuggerVusializer.visualize_vector(0, 4, Vector2.LEFT.rotated(PI/2), false, 0.01, Vector2(200, 500))
-	DebuggerVusializer.visualize_vector(0, 5, Vector2.LEFT.rotated(2*PI/3), false, 0.01, Vector2(200, 500))
-	DebuggerVusializer.visualize_vector(0, 6, Vector2.LEFT.rotated(3*PI/4), false, 0.01, Vector2(200, 500))
-	DebuggerVusializer.visualize_vector(0, 7, Vector2.LEFT.rotated(5*PI/6), false, 0.01, Vector2(200, 500))
-	DebuggerVusializer.visualize_vector(0, 8, Vector2.LEFT.rotated(PI), false, 0.01, Vector2(200, 500))
-	DebuggerVusializer.visualize_vector(0, 9, Vector2.LEFT.rotated(7*PI/6), false, 0.01, Vector2(200, 500))
-	DebuggerVusializer.visualize_vector(0, 10, Vector2.LEFT.rotated(5*PI/4), false, 0.01, Vector2(200, 500))
-	DebuggerVusializer.visualize_vector(0, 11, Vector2.LEFT.rotated(4*PI/3), false, 0.01, Vector2(200, 500))
-	DebuggerVusializer.visualize_vector(0, 12, Vector2.LEFT.rotated(3*PI/2), false, 0.01, Vector2(200, 500))
-	DebuggerVusializer.visualize_vector(0, 13, Vector2.LEFT.rotated(5*PI/3), false, 0.01, Vector2(200, 500))
-	DebuggerVusializer.visualize_vector(0, 14, Vector2.LEFT.rotated(7*PI/4), false, 0.01, Vector2(200, 500))
-	DebuggerVusializer.visualize_vector(0, 15, Vector2.LEFT.rotated(11*PI/6), false, 0.01, Vector2(200, 500))
-	DebuggerVusializer.visualize_vector(0, 16, Vector2.LEFT.rotated(2*PI), false, 0.01, Vector2(200, 500))
+	DebuggerVusializer.visualize_vector(0, 0, Vector2.LEFT.rotated(0), false, 0.100)
+	DebuggerVusializer.visualize_vector(0, 1, Vector2.LEFT.rotated(PI/6), false, 0.01)
+	DebuggerVusializer.visualize_vector(0, 2, Vector2.LEFT.rotated(PI/4), false, 0.01)
+	DebuggerVusializer.visualize_vector(0, 3, Vector2.LEFT.rotated(PI/3), false, 0.01)
+	DebuggerVusializer.visualize_vector(0, 4, Vector2.LEFT.rotated(PI/2), false, 0.01)
+	DebuggerVusializer.visualize_vector(0, 5, Vector2.LEFT.rotated(2*PI/3), false, 0.01)
+	DebuggerVusializer.visualize_vector(0, 6, Vector2.LEFT.rotated(3*PI/4), false, 0.01)
+	DebuggerVusializer.visualize_vector(0, 7, Vector2.LEFT.rotated(5*PI/6), false, 0.01)
+	DebuggerVusializer.visualize_vector(0, 8, Vector2.LEFT.rotated(PI), false, 0.01)
+	DebuggerVusializer.visualize_vector(0, 9, Vector2.LEFT.rotated(7*PI/6), false, 0.01)
+	DebuggerVusializer.visualize_vector(0, 10, Vector2.LEFT.rotated(5*PI/4), false, 0.01)
+	DebuggerVusializer.visualize_vector(0, 11, Vector2.LEFT.rotated(4*PI/3), false, 0.01)
+	DebuggerVusializer.visualize_vector(0, 12, Vector2.LEFT.rotated(3*PI/2), false, 0.01)
+	DebuggerVusializer.visualize_vector(0, 13, Vector2.LEFT.rotated(5*PI/3), false, 0.01)
+	DebuggerVusializer.visualize_vector(0, 14, Vector2.LEFT.rotated(7*PI/4), false, 0.01)
+	DebuggerVusializer.visualize_vector(0, 15, Vector2.LEFT.rotated(11*PI/6), false, 0.01)
+	DebuggerVusializer.visualize_vector(0, 16, Vector2.LEFT.rotated(2*PI), false, 0.01)
 
 
 
@@ -43,20 +43,16 @@ func _physics_process(_delta: float) -> void:
 	project_current_second = time["second"]
 
 
-	DebuggerVusializer.show_debug_info(["local_pos= ", get_local_mouse_position(),"\n", "global_pos=", get_global_mouse_position()], 0, ["MousePosition"])
-	DebuggerVusializer.show_debug_info(["local_pos= ", get_local_mouse_position(),"\n", "global_pos=", get_global_mouse_position()], 1, ["MousePosition"])
-	DebuggerVusializer.show_debug_info(["local_pos= ", get_local_mouse_position(),"\n", "global_pos=", get_global_mouse_position()], 2, ["MousePosition"])
-	DebuggerVusializer.show_debug_info(["local_pos= ", get_local_mouse_position(),"\n", "global_pos=", get_global_mouse_position()], 3, ["MousePosition"])
 	DebuggerVusializer.show_debug_info(["local_pos= ", get_local_mouse_position(),"\n", "global_pos=", get_global_mouse_position()], 4, ["MousePosition"])
-	DebuggerVusializer.show_debug_info(["local_pos= ", get_local_mouse_position(),"\n", "global_pos=", get_global_mouse_position()], 5, ["MousePosition"])
-	DebuggerVusializer.visualize_vector(1, 1, get_global_mouse_position(), false, sqrt(pow(get_window().size.y, 2)+pow(get_window().size.x, 2))/100, Vector2(600, 700))
-	DebuggerVusializer.visualize_vector(2, 0, get_local_mouse_position(), false, sqrt(pow(get_window().size.y, 2)+pow(get_window().size.x, 2))/100, Vector2(200, 500))
+	DebuggerVusializer.show_debug_info([int(project_current_hour), ":", int(project_current_minute), ":", int(project_current_second)], 1, ["TIME", Time.get_time_dict_from_system()], Vector2(404, 307))
+	DebuggerVusializer.visualize_vector(2, 1, get_global_mouse_position(), false, sqrt(pow(get_window().size.y, 2)+pow(get_window().size.x, 2))/100, Vector2(470, 133))
+	DebuggerVusializer.visualize_vector(3, 0, get_local_mouse_position(), false, sqrt(pow(get_window().size.y, 2)+pow(get_window().size.x, 2))/100, Vector2(470, 133))
 
 
-	DebuggerVusializer.visualize_vector(3, 6, calculate_hand_tip_location(HOUR), false, 0.05, Vector2(600, 500))
-	DebuggerVusializer.visualize_vector(3, 6, calculate_hand_tip_location(HOUR), false, 0.05, Vector2(600, 500))
-	DebuggerVusializer.visualize_vector(3, 7, calculate_hand_tip_location(MINUTE), false, 0.05, Vector2(600, 500))
-	DebuggerVusializer.visualize_vector(3, 0, calculate_hand_tip_location(SECOND), false, 0.05, Vector2(600, 500))
+	DebuggerVusializer.visualize_vector(3, 6, calculate_hand_tip_location(HOUR), false, 0.05)
+	DebuggerVusializer.visualize_vector(3, 6, calculate_hand_tip_location(HOUR), false, 0.05)
+	DebuggerVusializer.visualize_vector(3, 7, calculate_hand_tip_location(MINUTE), false, 0.05)
+	DebuggerVusializer.visualize_vector(3, 0, calculate_hand_tip_location(SECOND), false, 0.05)
 
 
 func calculate_hand_tip_location(hand: int) -> Vector2:

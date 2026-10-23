@@ -63,10 +63,10 @@ func show_debug_info(
 	or pnl_position.y > windows_sise.y
 	or pnl_position.x < 0
 	or pnl_position.y > 0):
-		push_warning("Панель {0} находится за границей экрана.
-		Положение панели: {1}
-		Размер окна: {2}
-		".format([pnl_id, pnl_position, windows_sise]))
+		#push_warning("Панель {0} находится за границей экрана.
+		#Положение панели: {1}
+		#Размер окна: {2}
+		#".format([pnl_id, pnl_position, windows_sise]))
 		## Поставив Vector2.ZERO, будет использоваться маркер для координат
 		pnl_position = Vector2.ZERO
 
@@ -104,11 +104,11 @@ func visualize_vector(
 	or pnl_position.y > windows_sise.y
 	or pnl_position.x < 0
 	or pnl_position.y > 0):
-		push_warning("Панель {0} находится за границей экрана.
-		Положение панели: {1}
-		Размер окна: {2}
-		Вместо указанных координат будут использоваться координаты Marker2D
-		".format([pnl_id, pnl_position, windows_sise]))
+		#push_warning("Панель {0} находится за границей экрана.
+		#Положение панели: {1}
+		#Размер окна: {2}
+		#Вместо указанных координат будут использоваться координаты Marker2D
+		#".format([pnl_id, pnl_position, windows_sise]))
 		## Поставив Vector2.ZERO, будет использоваться маркер для координат
 		pnl_position = Vector2.ZERO
 

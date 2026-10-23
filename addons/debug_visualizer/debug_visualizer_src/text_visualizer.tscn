@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://b1bl85c27q8xm" path="res://addons/debug_visualizer/debug_visualizer_src/visualizer_move_button.tscn" id="2_ssywx"]
 
 [node name="TextVisualizer" type="Panel" unique_id=864187809]
+self_modulate = Color(1, 1, 1, 0.49803922)
 offset_right = 283.0
 offset_bottom = 78.0
 mouse_filter = 2

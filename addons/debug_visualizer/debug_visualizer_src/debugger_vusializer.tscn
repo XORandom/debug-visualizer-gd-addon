@@ -40,25 +40,25 @@ theme = ExtResource("2_degxc")
 metadata/_edit_lock_ = true
 
 [node name="Marker2D" type="Marker2D" parent="Control/Panel" unique_id=1877844598]
-position = Vector2(1018, 87)
+position = Vector2(128, 128)
 
 [node name="Marker2D2" type="Marker2D" parent="Control/Panel" unique_id=1095987816]
-position = Vector2(1018, 307)
+position = Vector2(372, 279)
 
 [node name="Marker2D3" type="Marker2D" parent="Control/Panel" unique_id=1077930905]
-position = Vector2(1018, 498)
+position = Vector2(1036, 100)
 
 [node name="Marker2D4" type="Marker2D" parent="Control/Panel" unique_id=270508034]
-position = Vector2(542, 80)
+position = Vector2(518, 151)
 
 [node name="Marker2D5" type="Marker2D" parent="Control/Panel" unique_id=445541668]
-position = Vector2(778, 83)
+position = Vector2(58, 364)
 
 [node name="Marker2D6" type="Marker2D" parent="Control/Panel" unique_id=996582936]
-position = Vector2(778, 308)
+position = Vector2(47, 227)
 
 [node name="Marker2D7" type="Marker2D" parent="Control/Panel" unique_id=891170401]
-position = Vector2(778, 504)
+position = Vector2(52, 493)
 
 [node name="Marker2D8" type="Marker2D" parent="Control/Panel" unique_id=1307133229]
-position = Vector2(247, 80)
+position = Vector2(674, 505)

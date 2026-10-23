@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://b1bl85c27q8xm" path="res://addons/debug_visualizer/debug_visualizer_src/visualizer_move_button.tscn" id="4_pt402"]
 
 [node name="VectorVisualizer" type="Sprite2D" unique_id=1805671880]
+self_modulate = Color(1, 1, 1, 0.49803922)
 z_index = 4096
 texture_filter = 1
 texture = ExtResource("1_4wckf")
