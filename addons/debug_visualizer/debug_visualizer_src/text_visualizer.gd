@@ -1,3 +1,4 @@
+#@tool
 extends Panel
 class_name TextVisualizer
 
@@ -10,6 +11,14 @@ class_name TextVisualizer
 
 ## Создать массив с текстом, где текст по каждому индексу показывается в своей вкладке с текстом TODO
 
+func  _ready() -> void:
+	text_visualizer_text.resized.connect(_on_text_visualizer_text_resized)
+
 func show_text(caption_text:String, card_text:String) -> void:
 		text_visualizer_title.text = caption_text
 		text_visualizer_text.text = card_text
+
+
+func _on_text_visualizer_text_resized() -> void:
+	size.x = text_visualizer_text.size.x
+	size.y = text_visualizer_text.size.y + 20

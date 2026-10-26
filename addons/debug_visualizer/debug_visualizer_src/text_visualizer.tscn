@@ -7,8 +7,9 @@
 
 [node name="TextVisualizer" type="Panel" unique_id=864187809]
 self_modulate = Color(1, 1, 1, 0.49803922)
-offset_right = 283.0
-offset_bottom = 78.0
+offset_top = -1.0
+offset_right = 551.0
+offset_bottom = 104.0
 mouse_filter = 2
 theme = ExtResource("1_aw1gb")
 script = ExtResource("1_ssywx")
@@ -33,15 +34,17 @@ offset_bottom = 57.0
 grow_horizontal = 2
 mouse_filter = 2
 theme_override_font_sizes/normal_font_size = 12
-text = "ТЕКСТТЕКСТТЕКСТТЕКСТТЕКСТТЕКСТТЕКСТТЕКСТТЕКСТТЕКСТТЕКСТТЕКСТТЕКСТТЕКСТТЕКСТТЕКСТТЕКСТТЕКСТТЕКСТТЕКСТТЕКСТ"
+text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam lectus risus, finibus ornare vestibulum et, feugiat quis dui. Vivamus sit amet dolor et magna facilisis rhoncus. Curabitur maximus est sed porta scelerisque. Sed suscipit, arcu volutpat feugiat posuere, eros nisi tristique nibh, mollis vehicula lectus tortor eu purus. Donec ut tortor blandit, sagittis diam eget, suscipit eros. "
 fit_content = true
 
 [node name="VisualizerHideButton" parent="." unique_id=641075653 instance=ExtResource("1_oraqp")]
 layout_mode = 1
+offset_top = -11.0
+offset_bottom = 75.0
 
 [node name="VisualizerMoveButton" parent="." unique_id=1384106484 instance=ExtResource("2_ssywx")]
 layout_mode = 1
 offset_left = 22.0
-offset_top = -17.0
+offset_top = -5.0
 offset_right = 134.0
-offset_bottom = 47.0
+offset_bottom = 59.0

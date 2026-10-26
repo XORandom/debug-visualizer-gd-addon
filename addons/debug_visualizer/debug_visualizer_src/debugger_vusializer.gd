@@ -147,8 +147,9 @@ func get_marker_pos(panel_id, placed_node) -> void:
 		temp_child_link=panel.get_child(panel_id)
 
 	# Удаляем маркер
-	temp_child_link.queue_free()
-	placed_node.position = temp_child_link.position
+	if temp_child_link != null:
+		temp_child_link.queue_free()
+		placed_node.position = temp_child_link.position
 
 
 
