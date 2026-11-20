@@ -1,5 +1,5 @@
 # Debug Visualizer
-https://store.godotengine.org/asset/xorandom/debug-visualizer/
+
 
 The addon allows you to display any text or variables on movable panels using.
 **`DebuggerVusializer.show_debug_info()`**
