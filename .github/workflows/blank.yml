@@ -1,0 +1,77 @@
+name: Release to Godot Asset Library
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+  release:
+      types: [published]
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+
+      # Runs a single command using the runners shell
+      - name: Set variables
+        id: vars
+        run: |
+          echo "PROJECT_NAME=${{ github.event.repository.name }}" >> $GITHUB_OUTPUT
+          echo "ADDON_NAME=debug_visualizer" >> $GITHUB_OUTPUT
+          echo "ZIP_NAME=${{ github.event.repository.name }}.zip" >> $GITHUB_OUTPUT
+          
+      # Runs a set of commands using the runners shell
+      - name: Addon structure
+        run: |
+          PROJECT_NAME="${{ steps.vars.outputs.PROJECT_NAME }}"
+          ADDON_NAME="${{ steps.vars.outputs.ADDON_NAME }}"
+          ZIP_NAME="${{ steps.vars.outputs.ZIP_NAME }}"
+          mkdir -p "build/${PROJECT_NAME}/addons/${ADDON_NAME}"
+          mkdir -p "build/${PROJECT_NAME}/examples/debug_visualizer_examples/"
+          cp -r "addons/${ADDON_NAME}/." "build/${PROJECT_NAME}/addons/${ADDON_NAME}/"
+          cp -r "examples/debug_visualizer_examples/." "build/${PROJECT_NAME}/examples/debug_visualizer_examples/"
+          if [ -f "License" ]; then
+           cp "License" "build/${PROJECT_NAME}/addons/${ADDON_NAME}/"
+           echo "License скопирован"
+          elif [ -f "LICENSE" ]; then
+           cp "LICENSE" "build/${PROJECT_NAME}/addons/${ADDON_NAME}/"
+           echo "LICENSE скопирован"
+          fi
+          if [ -f "README.md" ]; then
+            cp "README.md" "build/${PROJECT_NAME}/addons/${ADDON_NAME}/"
+            echo "README.md скопирован"
+          fi
+          echo ""
+          echo "Итоговая структура:"
+          find build -type f | sort
+          
+          cd build
+          zip -r "../${ZIP_NAME}" "${PROJECT_NAME}"
+          cd ..
+          echo "Архив создан:"
+          ls -lh "${ZIP_NAME}"
+          unzip -l "${ZIP_NAME}"
+          
+      # Runs a set of commands using the runners shell
+      - name: Upload manually 
+        uses: actions/upload-artifact@v7
+        with:
+          name: ${{ steps.vars.outputs.ZIP_NAME }}
+          path: ${{ steps.vars.outputs.ZIP_NAME }}
+          
+      # Runs a set of commands using the runners shell         
+      - name: Upload to GitHub Release
+        if: github.event_name == 'release'
+        uses: softprops/action-gh-release@v3.0.4
+        with:
+          files: ${{ steps.vars.outputs.ZIP_NAME }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
